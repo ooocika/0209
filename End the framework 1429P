@@ -1,0 +1,159 @@
+public interface Messager {
+  String getMessage();
+
+}
+
+//
+public class DefaultBookingService implements BookingService {
+
+  private Messager messager;
+
+  public void setMessager(Messager messager) {
+    this.messager = messenger;
+  }
+
+  public void processBooking() {
+
+  }
+}
+
+//
+class GroovyMessager implements Messager {
+  String message
+}
+
+//
+public final class Boot {
+
+  public static void main(final String[] args) throws Exception {
+    ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+    System.out.println(messager.getMessage());
+    System.in.read();
+    System.out.println(messenger.getMessage());
+  }
+}
+
+//
+class GroovyMessenger implements Messenger {
+  private String message = "Bingo"
+
+  public String getMessage(){
+    return "'' + this.message + "'"
+  }
+
+  public void setMessage(String message) {
+    this.message = message;
+  }
+}
+
+//
+class GroovyMessenger implements Messenger {
+  String message
+}
+
+//
+class GroovyMessenger implements Messenger {
+
+  GroovyMessenger() {
+  }
+
+  GroovyMessenger(String message) {
+    this.message = message;
+  }
+
+  String message
+  String anotherMessage
+}
+//
+
+public interface Calculator {
+  int add(int x, int y);
+}
+
+//
+class GroovyCalculator implements Calculator {
+  int add(int x, int y){
+    x+y
+  }
+}
+
+//
+public class Main {
+  public static void main(String[] args) {
+    ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+    Calculator calc = ctx.getBean("calculator", Calculator.class);
+    System.out.println(calc.add(2, 8));
+  }
+
+}
+
+//
+public interface GroovyObjectCustomizer {
+  void customize(GroovyObject goo);
+}
+
+//
+public final class SimpleMethodTracingCustomizer implements GroovyObjectCustomizer {
+
+  public void customize(GroovyObject goo) {
+    DelegatingMetaClass metaClass = new DelegatingMetaClass(goo.getMetaClass()) {
+
+      public Object invokeMethod(Object object, String methodName, Object[] arguments) {
+        System.out.println("Invoking '" + methodName + "'.");
+        return super.invokeMethod(object, methodName, arguments);
+      }
+    };
+    metaClass.initialize();
+    goo.setMetaClass(metaClass);
+  }
+}
+
+//
+public interface Messenger {
+  String getMessage();}
+
+  String message;
+
+String getMessage(){
+  return message;
+}
+
+void setMessage(String aMessage){
+  message = aMessage;
+}
+
+  //
+  class FortuneController implements Controller {
+
+    @Property
+    FortuneService fortuneService;
+
+    ModelAndView handleRequest(HttpServletRequest request,
+        HttpServletResponse httpServletResponse) {
+      return new ModelAndView("tell", "fortune", this.fortuneService.tellFortune());
+    }
+  }
+
+  //
+  class TestBeanValidator implements Validator {
+
+  boolean supports(Class clazz)}{
+    return TestBean.class.isAssignableFrom(clazz)
+      
+  }
+
+void validate(Object bean, Errors errors){
+  if(bean.name?.trim()?.size() > 0){
+    return 
+  }
+  errors.reject("whiteSpace", "Cannot be composed wholly of whitespace");
+}
+}
+//
+// 1429P End
+1. JDBC
+  2.Servlet
+  3.Object Oriented Programming Using java (oop)
+  4.spring-framework
+  5.spring-reference.
+  
