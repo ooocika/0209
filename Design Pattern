@@ -1,0 +1,546 @@
+public interface Messager {
+  String getMessage();
+
+}
+
+//
+public class DefaultBookingService implements BookingService {
+
+  private Messager messager;
+
+  public void setMessager(Messager messager) {
+    this.messager = messenger;
+  }
+
+  public void processBooking() {
+
+  }
+}
+
+//
+class GroovyMessager implements Messager {
+  String message
+}
+
+//
+public final class Boot {
+
+  public static void main(final String[] args) throws Exception {
+    ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+    System.out.println(messager.getMessage());
+    System.in.read();
+    System.out.println(messenger.getMessage());
+  }
+}
+
+//
+class GroovyMessenger implements Messenger {
+  private String message = "Bingo"
+
+  public String getMessage(){
+    return "'' + this.message + "'"
+  }
+
+  public void setMessage(String message) {
+    this.message = message;
+  }
+}
+
+//
+class GroovyMessenger implements Messenger {
+  String message
+}
+
+//
+class GroovyMessenger implements Messenger {
+
+  GroovyMessenger() {
+  }
+
+  GroovyMessenger(String message) {
+    this.message = message;
+  }
+
+  String message
+  String anotherMessage
+}
+//
+
+public interface Calculator {
+  int add(int x, int y);
+}
+
+//
+class GroovyCalculator implements Calculator {
+  int add(int x, int y){
+    x+y
+  }
+}
+
+//
+public class Main {
+  public static void main(String[] args) {
+    ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+    Calculator calc = ctx.getBean("calculator", Calculator.class);
+    System.out.println(calc.add(2, 8));
+  }
+
+}
+
+//
+public interface GroovyObjectCustomizer {
+  void customize(GroovyObject goo);
+}
+
+//
+public final class SimpleMethodTracingCustomizer implements GroovyObjectCustomizer {
+
+  public void customize(GroovyObject goo) {
+    DelegatingMetaClass metaClass = new DelegatingMetaClass(goo.getMetaClass()) {
+
+      public Object invokeMethod(Object object, String methodName, Object[] arguments) {
+        System.out.println("Invoking '" + methodName + "'.");
+        return super.invokeMethod(object, methodName, arguments);
+      }
+    };
+    metaClass.initialize();
+    goo.setMetaClass(metaClass);
+  }
+}
+
+//
+public interface Messenger {
+  String getMessage();}
+
+  String message;
+
+String getMessage(){
+  return message;
+}
+
+void setMessage(String aMessage){
+  message = aMessage;
+}
+
+  //
+  class FortuneController implements Controller {
+
+    @Property
+    FortuneService fortuneService;
+
+    ModelAndView handleRequest(HttpServletRequest request,
+        HttpServletResponse httpServletResponse) {
+      return new ModelAndView("tell", "fortune", this.fortuneService.tellFortune());
+    }
+  }
+
+  //
+  class TestBeanValidator implements Validator {
+
+  boolean supports(Class clazz)}{
+    return TestBean.class.isAssignableFrom(clazz)
+      
+  }
+
+void validate(Object bean, Errors errors){
+  if(bean.name?.trim()?.size() > 0){
+    return 
+  }
+  errors.reject("whiteSpace", "Cannot be composed wholly of whitespace");
+}
+  }
+  //
+  // 1429P End
+  1. JDBC 2. Servlet 3.
+
+  Object Oriented
+  Programming Using
+
+  java (oop)
+  4.spring-framework
+  5.spring-reference.
+  //
+  public interface Xpay {
+
+    public String getCreditCardNo();
+
+    public String getCustomerName();
+
+    public String getCardExpMonth();
+
+    public String getCardExpYear();
+
+    public short getCardCVVNo();
+
+    public Double getAmount();
+
+    public void setCreditCardNo(String creditCardNo);
+
+    public void setCustomerName(String customerName);
+
+    public void setCardExpMonth(String cardExpMonth);
+
+    public void setCardExpYear(String cardExpYear);
+
+    public void setCardCVVNo(short cardCVVNo);
+
+    public void setAmount(Double amount);
+
+  }
+
+  //
+  public class XpayImpl implements Xpay {
+
+    private String creditCardNo;
+    private String customerName;
+    private String cardExpMonth;
+    private String cardExpYear;
+    private short cardCVVNo;
+    private Double amount;
+
+    @Override
+    public String getCreditCardNo() {
+      return creditCardNo;
+    }
+
+    @Override
+    public String getCustomerName() {
+      return customerName;
+    }
+
+    @Override
+    public String getCardExpMonth() {
+      return cardExpMonth;
+    }
+
+    @Override
+    public String getCardExpYear() {
+      return cardExpYear;
+    }
+
+    @Override
+    public short getCardCVVNo() {
+      return cardCVVNo;
+
+    }
+
+    @Override
+    public Double getAmount() {
+      return amount;
+    }
+
+    @Override
+    public void setCreditCardNo(String creditCardNo) {
+      this.creditCardNo = creditCardNo;
+    }
+
+    @Override
+    public void setCustomerName(String customerName) {
+      this.customerName = customerName;
+    }
+
+    @Override
+    public void setCardExpMonth(String cardExpMonth) {
+      this.cardExpMonth = cardExpMonth;
+    }
+
+    @Override
+
+    public void setCardExpYear(String cardExpYear) {
+      this.cardExpYear = cardExpYear;
+    }
+
+    @Override
+    public void setCardCVVONo(Short cardCVVNo) {
+      this.cardCVVNo = cardCVVNo;
+    }
+
+    @Override
+    public void setAmount(Double amount) {
+      this.amount = amount;
+    }
+  }
+
+  //
+@Override
+  public Double getTotalAmount(){
+  return totalAmount;
+  }
+
+  //
+@Override
+  public void setCardOwnerName(String cardOwnerName){
+  this.cardOwnerName = cardOwnerName;
+  }
+  //
+
+@Override
+  public void setCardExpMonthDate(String cardExpMonthDate){
+  this.cardExpMonthDate = cardExpMonthDate;
+  }
+
+@Override
+  public void setCVVNo(Integer cVVNo){
+  this.cVVNo = cVVNo;
+  }
+
+  private void setProp() {
+    setCardOwnerName(this.xpay.getCustomerName());
+    setCustCardNo(this.xpay.getCreditCardNo());
+    setCardExpMonthDate(this.xpay.getCardExpMonth() + "/" + this.xpay.getCardExpYear());
+
+    setCVVNo(this.xpay.getCardCVVNo().intValue);
+    setTotalAmount(this.xpay.getAmount());
+
+  }
+}
+
+//
+public class RunAdapterExample {
+  public static void main(String[] args){
+
+    Xpay xpay = new XpayImpl();
+    xpay.setCreditCardNo("34567892141");
+    xpay.setCustomerName("John Doe");
+    xpay.setCardExpMonth("12");
+    xpay.setCadCVVNo((short)235);
+    xpay.setAmount(2565. 23);
+  
+  PayD payD = new XpayToPayDAdapter(xpay);
+    testPayD(payD);
+  }
+
+  private static void testPayD(PayD payD) {
+
+    System.out.println(payD.getCustCardNo());
+    System.out.println(payD.getCardOwnerName());
+    System.out.println(payD.getCardExpMonthDate());
+    System.out.println(payD.getCVVNo());
+    System.out.println(payD.getTotalAmount());
+  }}
+
+  //
+  ScheduleServer scheduleServer = new ScheduleServer();
+
+  scheduleServer.startBooting();scheduleServer.readSystemConfigFile();scheduleServer.init();scheduleServer.initializeContext();scheduleServer.initializeListeners();scheduleServer.createSystemObjects();
+
+  System.out.println("Start working.....");System.out.println("After work done........");
+
+  scheduleServer.destorySystemObjects();scheduleServer.destoryListeners();scheduleServer.destoryContext();scheduleServer.shutdown();
+
+  //
+  public class ScheduleServerFacade {
+
+    private final ScheduleServer scheduleServer;
+
+    public ScheduleServerFacade(ScheduleServer scheduleServer) {
+      this.scheduleServer = scheduleServer;
+    }
+
+    public void startServer() {
+
+      scheduleServer.startBooting();
+      scheduleServer.readSystemConfigFile();
+      scheduleServer.init();
+      scheduleServer.initializeContext();
+      scheduleServer.initializeListeners();
+      scheduleServer.createSystemObjects();
+    }
+
+    public void stopServer() {
+
+      scheduleServer.releaseProcesses();
+      scheduleServer.destory();
+      scheduleServer.destorySystemObjects();
+      scheduleServer.destoryListeners();
+      scheduleServer.destoryContext();
+      scheduleServer.shutdown();
+    }
+
+  }
+
+  //
+  public class TestFacade {
+    public static void main(String[] args) {
+      ScheduleServer scheduleServer = new ScheduleServer();
+      ScheduleServerFacade facadeServer = new ScheduleServerFacade(scheduleServer);
+      facadeServer.startServer();
+      System.out.println("Start working...");
+      System.out.println("After work done...");
+
+      facadeServer.stopServer();
+    }
+
+  }
+  //
+  Chapter 4
+
+  Composite Design Pattern
+
+  public abstact
+
+  class HtmlTag {
+
+    public abstract String getTagName();
+
+    public abstract void setStartTag(String tag);
+
+    public abstract void setEndTag(String tag);
+
+  public void setTagBody(String tagBody){
+
+    throw new UnsupportedOperationException("Current operation is not support
+                                            
+      for this object");
+  }
+
+  public void addChildTag(Htmltag htmlTag){
+    throw new UnsupportedOperationException("Current operation is not support
+      for this object")
+  }
+
+  public void removeChildTag(Htmltag htmlTag){
+    throw new UnsupportedOperationExcetion("Current operation is not support
+      for this object");
+  }
+
+  public List<HtmlTag>getChildren(){
+    throw new UnsupportedOperationExcetion("Current operation is not support
+      for this object");
+  }
+
+    public abstract void generateHtml();
+
+  }
+
+  //
+  public class HtmlParentElement extends HtmlTag {
+
+    private String tagName;
+    private String startTag;
+    private String endTag;
+    private List<HtmlTag> childrenTag;
+
+    public HtmlParentElement(String tagName) {
+      this.tagName = tagName;
+      this.startTag = "";
+      this.endTag = "";
+      this.childrenTag = new ArrayList<>();
+    }
+
+    @Override
+    public String getTagName() {
+      return tagName;
+    }
+
+    @Override
+    public void setStartTag(String tag) {
+      this.startTag = tag;
+    }
+
+    @Override
+    public void setEndTag(String tag) {
+      this.endTag = tag;
+    }
+
+    @Override
+    public void addChilTag(HtmlTag htmlTag) {
+      chilrenTag.add(htmlTag);
+    }
+
+    @Override
+    public void removeChildTag(HtmlTag htmlTag) {
+      childrenTag.remove(htmlTag);
+    }
+
+    @Override
+    public List<HtmlTag> getChildren() {
+      return childrenTag;
+    }
+
+    @Override
+    public void generateHtml() {
+      System.out.println(startTag);
+      for (HtmlTag htmlTag : childrenTag) {
+        tag.generateHtml();
+      }
+      System.out.println(endTag);
+    }
+  }
+
+  //
+  public class HtmlElement extends HtmlTag {
+
+    private String tagName;
+    private String startTag;
+    private String endTag;
+    private String tagBody;
+
+    public HtmlElement(String tagName) {
+      this.tagName = tagName;
+      this.tagBody = "";
+      this.startTag = "";
+      this.endTag = "";
+
+    }
+
+    @Override
+    public String getTagName() {
+      return tagName;
+    }
+
+    @Override
+    public void setStartTag(String tag) {
+      this.startTag = tag;
+    }
+
+    @Override
+    public void setEndTag(String tag) {
+      this.endTag = tag;
+    }
+
+    @Override
+    public void setTagBody(String tagBody) {
+      this.tagBody = tagBody;
+    }
+
+    @Override
+    public void generateHtml() {
+      System.out.println(startTag + "" + tagBody + "endTag");
+    }
+  }
+
+  //
+  public class TestCompositePattern {
+
+  public static void main(String[] args){
+    HtmlTag parentTag = new HtmlParentElement("<html>");
+    parentTag.setStartTag("<html>");
+    parentTag.setEndTag("</html>");
+
+    HtmlTag p1 = new HtmlParentElement("<body>");
+    p1.setStartTag("<body>");
+    p1.setEndTag("</body>");
+
+    parentTag.addChildTag(p1);
+
+
+    HtmlTag child1 =
+
+    enw HtmlElement("<P>");
+    child1.setStartTag("<p>");
+    child1.setEndTag("</p>");
+    child1.setTafBody("Testing html tag library");
+    p1.addChildTag(child1);
+
+    child1 = new HtmlElement("<p>");
+    child1.setStartTag("<p>");
+    child1.setEndTag("</p>");
+    child1.setTagBody("Paragraph 2");
+  p1.addChildTag(child1);
+
+    parendTag.generateHtml();
+  }
+}
+// 32P
+// 23 / 173
